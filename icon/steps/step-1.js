@@ -50,6 +50,7 @@ promise.get(Wizard.config.baseUrl + 'site/blocks/block-video/icon/data/icon.json
 								},
 								"background": {
 								      "type": "string",
+								      "enum": ["green","blue","red","purple","pink"],
 								      "default": "green",
 								},
 							  }
