@@ -1,8 +1,19 @@
+
 function init(step){
 
-	console.log(Wizard.config.baseUrl);
+    promise.get(Wizard.config.baseUrl + 'site/data?page=' + Wizard.config.pageUrl + '&' + location.hash.substring(1)).then(
+			function(error, text, xhr) {
+				if (error) {
+					alert('Error ' + xhr.status);
+					return;
+				}
+				console.log("result block data json : " + text);
+	});
 
-promise.get(Wizard.config.baseUrl + 'site/blocks/block-video/icon/data/icon.json').then(
+
+	console.log(Wizard.config.pageUrl + location.hash);
+
+	promise.get(Wizard.config.baseUrl + 'site/blocks/block-video/icon/data/icon.json').then(
 				function(error, text, xhr) {
 					if (error) {
 						alert('Error ' + xhr.status);
