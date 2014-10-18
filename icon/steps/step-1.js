@@ -25,6 +25,7 @@ promise.get(Wizard.config.baseUrl + 'site/blocks/block-video/icon/data/icon.json
 							    },
 							    "icon": {
 							    	"type": "string",
+							    	"enum": ["rocket","value1","value2"],
 							    	"default": "rocket",
 							    },
 							    "categories": {
