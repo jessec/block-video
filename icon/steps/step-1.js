@@ -8,7 +8,7 @@ promise.get(Wizard.config.baseUrl + 'site/blocks/block-video/icon/data/icon.json
 						alert('Error ' + xhr.status);
 						return;
 					}
-					var starting_value = [ text ];
+					var starting_value = JSON.parse(text);
 					// Initialize the editor
 					var editor = new JSONEditor(document
 							.getElementById('editor_holder-' + step), {
