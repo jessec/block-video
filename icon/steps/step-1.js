@@ -28,6 +28,11 @@ promise.get(Wizard.config.baseUrl + 'site/blocks/block-video/icon/data/icon.json
 							    	"enum": ["rocket","sign","flag","office","employees","hands","bubble","money","lamp","patent","scale","milestone","roadmap"],
 							    	"default": "rocket",
 							    },
+								"background": {
+								      "type": "string",
+								      "enum": ["green","blue","red","purple","pink"],
+								      "default": "green",
+								},
 							    "categories": {
 							    	"type": "string",
 							    	"default": "cat-one cat-all"
@@ -47,12 +52,7 @@ promise.get(Wizard.config.baseUrl + 'site/blocks/block-video/icon/data/icon.json
 								"height": {
 								      "type": "number",
 								      "default": 340,
-								},
-								"background": {
-								      "type": "string",
-								      "enum": ["green","blue","red","purple","pink"],
-								      "default": "green",
-								},
+								}
 							  }
 						},
 						// Seed the form with a starting value
