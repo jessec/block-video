@@ -20,8 +20,7 @@ promise.get(Wizard.config.baseUrl + 'site/blocks/block-video/icon/data/icon.json
 							title : "Icon",
 							  "properties": {
 							    "title": {
-							      "type": "string",
-							      "default": "Titel",
+							      "type": "string"
 							    },
 							    "icon": {
 							    	"type": "string",
