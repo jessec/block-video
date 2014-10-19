@@ -1,7 +1,13 @@
 
 function init(step){
 
-    promise.get(Wizard.config.baseUrl + 'site/data?page=' + Wizard.config.pageUrl + '&' + location.hash.substring(1)).then(
+	var parser = document.createElement('a');
+	parser.href = Wizard.config.pageUrl;
+	console.log(parser);
+
+	var dataRequest = Wizard.config.baseUrl + 'site/data.json?page='+parser.pathname + '&' + location.hash.substring(1);//'edit-block-0-type-icon';
+
+    promise.get(dataRequest).then(
 			function(error, text, xhr) {
 				if (error) {
 					alert('Error ' + xhr.status);
