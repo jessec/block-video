@@ -102,7 +102,7 @@ promise.get(Wizard.config.baseUrl + 'site/blocks/block-video/barchart/data/barch
 				    			  "data" : jsonString
 				    			};
 
-				  			promise.post('http://localhost:8080/api/block', data).then(
+				  			promise.post(location.origin +'/api/block', data).then(
 				  					function(error, text, xhr) {
 				  						if (error) {
 				  							alert('Error ' + xhr.status);

@@ -114,7 +114,7 @@ function init(step) {
 
 												promise
 														.post(
-																'http://localhost:8080/api/block',
+																location.origin +'/api/block',
 																data)
 														.then(
 																function(error,
