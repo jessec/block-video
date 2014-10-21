@@ -24,7 +24,7 @@ function init(step) {
 
 		var req = dataRequest;
 		if(req == ""){
-			req = Wizard.config.baseUrl + 'site/blocks/block-video/slider/data/basic.json';
+			req = Wizard.config.baseUrl + 'site/blocks/block-video/slider/data/photo.json';
 		}
 		promise
 				.get(req)
