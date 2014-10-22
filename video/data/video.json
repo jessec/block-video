@@ -1,5 +1,7 @@
 {
-	url:"http://youtu.be/kDfw4yt554g",
-	height:"315",
-	width:"560"
+    "title" : "title",
+    "content" : "content",
+	"url":"http://youtu.be/kDfw4yt554g",
+	"height":"315",
+	"width":"560"
 }
