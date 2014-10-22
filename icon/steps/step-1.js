@@ -9,11 +9,13 @@ function init(step) {
 
 	promise.get(dataRequest).then(function(error, text, xhr) {
 		if (error) {
-			alert('Error ' + xhr.status);
-			return;
+//			/alert('Error ' + xhr.status);
+			//return;
+			dataRequest = "";
+		}else{
+			console.log("result block data json : " + text);
+			var json = JSON.parse(text);
 		}
-		console.log("result block data json : " + text);
-		var json = JSON.parse(text);
 		getData(dataRequest);
 	});
 
@@ -32,12 +34,15 @@ function init(step) {
 								alert('Error ' + xhr.status);
 								return;
 							}
-							var starting_value = JSON.parse(text).data;
+							var starting_value = "";
+							try{
+								starting_value = JSON.parse(text).data;
+							}catch(e){}
 
-							if(typeof(starting_value) == "undefined"){
+
+							if(typeof(starting_value) == "undefined" || starting_value == ""){
 								starting_value = JSON.parse(text);
 							}
-							// Initialize the editor
 							var editor = new JSONEditor(document
 									.getElementById('editor_holder-' + step), {
 								// Enable fetching schemas via ajax
