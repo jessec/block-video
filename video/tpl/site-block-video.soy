@@ -7,7 +7,7 @@
  * @param width
  */
 {template .video}
-    <figure class="block" data-type="video" data-size="620x430" style="width:{$width};height:{$height};overflow:hidden;background-color:#59595B;">
+    <figure class="block" data-type="video" data-size="620x430" style="width:{$width}px;height:{$height}px;overflow:hidden;background-color:#59595B;">
       <iframe width="{$width}" height="{$height}" src="{$url}" frameborder="0" allowfullscreen></iframe>
       <h1>{$title}</h1>
       <p>{$content|noAutoescape}</p>
