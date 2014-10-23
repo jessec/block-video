@@ -6,6 +6,7 @@
  * @param txt
  * @param num
  * @param title
+ * @param popup_title
  * @param content
  */
 {template .icon}
@@ -14,7 +15,7 @@
     <div class="mega-title">{$title}</div>
     <div class="mega-content">{$content}</div>
   </div>
-  <a class="fancybox" id="one" rel="group" href="/jaarplan-nieuw/svg-generator.php?img={$icon}&amp;txt={$txt|escapeUri}&amp;num={$num}" title="{$title}" data-bkgrnd="
+  <a class="fancybox" id="one" rel="group" href="/jaarplan-nieuw/svg-generator.php?img={$icon}&amp;txt={$txt|escapeUri}&amp;num={$num}" title="{$popup_title}" data-bkgrnd="
     {if $category == 'cat-one'}
       green
     {elseif $category == 'cat-two'}
