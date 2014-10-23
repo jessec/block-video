@@ -21,14 +21,6 @@ var config = {
                 "default": "cat-one",
                 "propertyOrder": 2
             },
-            "content": {
-                "type": "string",
-                "format": "html",
-                "options": {
-                    "wysiwyg": true
-                },
-                "propertyOrder": 3
-            },
             "icon": {
                 "type": "string",
                 "enum": [
@@ -55,16 +47,24 @@ var config = {
                     "toparrangement"
                 ],
                 "default": "rocket",
-                "propertyOrder": 4
+                "propertyOrder": 3
             },
             "num": {
                 "type": "number",
                 "default": 0,
-                "propertyOrder": 5
+                "propertyOrder": 4
             },
             "txt": {
                 "type": "string",
                 "default": "",
+                "propertyOrder": 5
+            },
+            "content": {
+                "type": "string",
+                "format": "html",
+                "options": {
+                    "wysiwyg": true
+                },
                 "propertyOrder": 6
             }
         }
