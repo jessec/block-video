@@ -5,9 +5,16 @@ var config = {
         "title": "Icon",
         "properties": {
             "title": {
+            	"name": "Titel",
                 "type": "string",
                 "default": "",
                 "propertyOrder": 1
+            },
+            "popup_title": {
+            	"name": "Popup Titel",
+                "type": "string",
+                "default": "",
+                "propertyOrder": 2
             },
             "category": {
                 "type": "string",
@@ -19,7 +26,7 @@ var config = {
                     "cat-five"
                 ],
                 "default": "cat-one",
-                "propertyOrder": 2
+                "propertyOrder": 3
             },
             "icon": {
                 "type": "string",
@@ -47,17 +54,17 @@ var config = {
                     "toparrangement"
                 ],
                 "default": "rocket",
-                "propertyOrder": 3
+                "propertyOrder": 4
             },
             "num": {
                 "type": "number",
-                "default": 0,
-                "propertyOrder": 4
+                "default": "",
+                "propertyOrder": 5
             },
             "txt": {
                 "type": "string",
                 "default": "",
-                "propertyOrder": 5
+                "propertyOrder": 6
             },
             "content": {
                 "type": "string",
@@ -65,7 +72,7 @@ var config = {
                 "options": {
                     "wysiwyg": true
                 },
-                "propertyOrder": 6
+                "propertyOrder": 7
             }
         }
     }
