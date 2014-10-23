@@ -1,30 +1,34 @@
 {namespace site.block}
 /**
- * Says hello to the world.
- * @param categories
+ * Kennispark icon template
+ * @param category
  * @param icon
  * @param txt
  * @param num
- * @param width
- * @param height
  * @param title
- * @param background
+ * @param content
  */
 {template .icon}
-
-{let $url}
-
-{/let}
-
-<div class="mega-entry {$categories} sign block" data-type="icon" data-src="/jaarplan-nieuw/svg-generator.php?img={$icon}&amp;txt={$txt}&amp;num={$num}" data-width="{$width}" data-height="{$height}">
+<div class="mega-entry {$category} cat-all block" data-type="icon" data-src="/jaarplan-nieuw/svg-generator.php?img={$icon}&amp;txt={$txt}&amp;num={$num}" data-width="320" data-height="240">
   <div class="mega-covercaption mega-square-top mega-landscape-bottom mega-portrait-bottom">
-      <div class="mega-title">{$title}</div>
-          <p>&nbsp;</p>
-        </div>
-        <a class="fancybox" id="one" rel="group" href="/jaarplan-nieuw/svg-generator.php?img={$icon}&amp;txt={$txt|escapeUri}&amp;num={$num}" title="{$title}" data-bkgrnd="{$background}">
-          <div class="mega-hover">
-            <div class="mega-hoverview"></div>
-          </div>
-        </a>
-      </div>
+    <div class="mega-title">{$title}</div>
+    <div class="mega-content">{$content}</div>
+  </div>
+  <a class="fancybox" id="one" rel="group" href="/jaarplan-nieuw/svg-generator.php?img={$icon}&amp;txt={$txt|escapeUri}&amp;num={$num}" title="{$title}" data-bkgrnd="
+    {if $category == 'cat-one'}
+      green
+    {elseif $category == 'cat-two'}
+      pink
+    {elseif $category == 'cat-three'}
+      red
+    {elseif $category == 'cat-four'}
+      blue
+    {elseif $category == 'cat-five'}
+      purple
+    {/if}">
+    <div class="mega-hover">
+      <div class="mega-hoverview"></div>
+    </div>
+  </a>
+</div>
 {/template}
