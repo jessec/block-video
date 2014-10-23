@@ -6,14 +6,16 @@ var config = {
         "properties": {
             "title": {
                 "type": "string",
-                "default": ""
+                "default": "",
+                "propertyOrder": 1
             },
             "content": {
                 "type": "string",
                 "format": "html",
                 "options": {
                     "wysiwyg": true
-                }
+                },
+                "propertyOrder": 2
             },
             "category": {
                 "type": "string",
@@ -24,7 +26,8 @@ var config = {
                     "cat-four",
                     "cat-five"
                 ],
-                "default": "cat-one"
+                "default": "cat-one",
+                "propertyOrder": 3
             },
             "icon": {
                 "type": "string",
@@ -51,15 +54,18 @@ var config = {
                     "suitcase",
                     "toparrangement"
                 ],
-                "default": "rocket"
+                "default": "rocket",
+                "propertyOrder": 4
             },
             "num": {
                 "type": "number",
-                "default": 0
+                "default": 0,
+                "propertyOrder": 5
             },
             "txt": {
                 "type": "string",
-                "default": ""
+                "default": "",
+                "propertyOrder": 6
             }
         }
     }
