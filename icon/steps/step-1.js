@@ -5,17 +5,11 @@ var config = {
         "title": "Icon",
         "properties": {
             "title": {
-            	"name": {
-					"title": "Titel"
-		    	},
                 "type": "string",
                 "default": "",
                 "propertyOrder": 1
             },
             "popup_title": {
-            	"name": {
-					"title": "Popup Titel"
-		    	},
                 "type": "string",
                 "default": "",
                 "propertyOrder": 2
