@@ -15,6 +15,17 @@ var config = {
                     "wysiwyg": true
                 }
             },
+            "category": {
+                "type": "string",
+                "enum": [
+                    "cat-one",
+                    "cat-two",
+                    "cat-three",
+                    "cat-four",
+                    "cat-five"
+                ],
+                "default": "cat-one"
+            },
             "icon": {
                 "type": "string",
                 "enum": [
@@ -41,17 +52,6 @@ var config = {
                     "toparrangement"
                 ],
                 "default": "rocket"
-            },
-            "category": {
-                "type": "string",
-                "enum": [
-                    "cat-one",
-                    "cat-two",
-                    "cat-three",
-                    "cat-four",
-                    "cat-five"
-                ],
-                "default": "cat-one"
             },
             "num": {
                 "type": "number",
