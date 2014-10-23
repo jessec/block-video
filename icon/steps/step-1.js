@@ -9,14 +9,6 @@ var config = {
                 "default": "",
                 "propertyOrder": 1
             },
-            "content": {
-                "type": "string",
-                "format": "html",
-                "options": {
-                    "wysiwyg": true
-                },
-                "propertyOrder": 2
-            },
             "category": {
                 "type": "string",
                 "enum": [
@@ -27,6 +19,14 @@ var config = {
                     "cat-five"
                 ],
                 "default": "cat-one",
+                "propertyOrder": 2
+            },
+            "content": {
+                "type": "string",
+                "format": "html",
+                "options": {
+                    "wysiwyg": true
+                },
                 "propertyOrder": 3
             },
             "icon": {
