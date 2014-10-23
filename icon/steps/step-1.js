@@ -1,6 +1,3 @@
-
-
-
 var config = {
 		data : 'site/blocks/block-video/icon/data/icon.json',
 		schema : {
@@ -8,43 +5,40 @@ var config = {
 			title : "Icon",
 			"properties" : {
 				"title" : {
-					"type" : "string"
+					"type" : "string",
+					"default" : "",
+				},
+				"content" : {
+					"type" : "string",
+					"format" : "html",
+					 "options": {
+						"wysiwyg": true
+					}
 				},
 				"icon" : {
 					"type" : "string",
-					"enum" : [ "rocket", "sign",
-							"flag", "office",
-							"employees", "hands",
-							"bubble", "money", "lamp",
-							"patent", "scale",
-							"milestone", "roadmap" ],
+					"enum" : [ "building", "eastholland", "flag", "globe", 
+						   "hands", "innovationprojects",
+						   "innovationvouchers", "knowlegdevouchers",
+						   "lamp", "lamps", "milestone", "money", "patent",
+						   "people", "roadmap", "rocket", "scale", "sign", 
+						   "speechballoon", "suitcase", "toparrangement"
+						],
 					"default" : "rocket",
 				},
-				"background" : {
+				"category" : {
 					"type" : "string",
-					"enum" : [ "green", "blue", "red",
-							"purple", "pink" ],
-					"default" : "green",
-				},
-				"categories" : {
-					"type" : "string",
-					"default" : "cat-one cat-all"
+					"enum" : [ "cat-one", "cat-two", "cat-three",
+							"cat-four", "cat-five" ],
+					"default" : "cat-one",
 				},
 				"num" : {
 					"type" : "number",
-					"default" : 12,
+					"default" : 0,
 				},
 				"txt" : {
 					"type" : "string",
 					"default" : "",
-				},
-				"width" : {
-					"type" : "number",
-					"default" : 340,
-				},
-				"height" : {
-					"type" : "number",
-					"default" : 340,
 				}
 			}
 		}
