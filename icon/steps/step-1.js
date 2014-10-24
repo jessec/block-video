@@ -53,13 +53,15 @@ var config = {
                 "propertyOrder": 4
             },
             "id": {
-				"type": "number",
-				"propertyOrder": 5
-			},
-            "num": {
                 "type": "number",
-                "propertyOrder": 6
+                "default": "",
+                "propertyOrder": 5
             },
+			"num": {
+			    "type": "number",
+			    "default": "",
+			    "propertyOrder": 6
+			},
             "txt": {
                 "type": "string",
                 "propertyOrder": 7
