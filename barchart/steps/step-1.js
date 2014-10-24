@@ -26,39 +26,42 @@ promise.get(Wizard.config.baseUrl + 'site/blocks/block-video/barchart/data/barch
 								  		"properties": {
 								  			"name": {
 								  				"type": "string",
-								  				"default": "tw",
+								  				"default": "tw"
 								  			},
 								  			"values": {
 								  				"type": "string",
-								  				"default": "10,20,30",
+								  				"default": "10,20,30"
 								  			},
 								  		},
 								  	},
 							  	},
 							  	"labels": {
 					  				"type": "string",
-					  				"default": "tw",
+					  				"default": "tw"
 							  	},
 							    "title": {
 							      "type": "string",
-							      "default": "Titel",
+							      "default": "Titel"
 							    },
-							    "categories": {
-							    	"type": "string",
-							    	"default": "cat-one cat-all"
-							    },
+							    "category": {
+									"type": "string",
+									"enum": [
+									"cat-one",
+									"cat-two",
+									"cat-three",
+									"cat-four",
+									"cat-five"
+									],
+									"default": "cat-one"
+								},
 							    "width": {
 								      "type": "number",
-								      "default": 340,
+								      "default": 340
 								},
 								"height": {
 								      "type": "number",
-								      "default": 340,
-								},
-								"background": {
-								      "type": "string",
-								      "default": "green",
-								},
+								      "default": 340
+								}
 							  }
 						},
 						// Seed the form with a starting value
@@ -92,7 +95,7 @@ promise.get(Wizard.config.baseUrl + 'site/blocks/block-video/barchart/data/barch
 
 				  			var fullData = {
 				  				"meta" : meta,
-				  				"editor" : editor.getValue(),
+				  				"editor" : editor.getValue()
 				  			}
 
 				  		 	var jsonString = JSON.stringify(fullData);
