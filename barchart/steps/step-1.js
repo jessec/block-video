@@ -35,6 +35,9 @@ promise.get(Wizard.config.baseUrl + 'site/blocks/block-video/barchart/data/barch
 								  		},
 								  	},
 							  	},
+							  	"id": {
+					  				"type": "string"
+							  	},
 							  	"labels": {
 					  				"type": "string",
 					  				"default": "tw"
