@@ -24,11 +24,11 @@
      data-height="{$height}"
   >
   <div class="mega-covercaption mega-square-top mega-landscape-bottom mega-portrait-bottom">
-    <div class="mega-title">{$title}</div>
-    <div class="mega-content">{$content}</div>
+    <div class="mega-title">{$title?:''}</div>
+    <div class="mega-content">{$content?:''}</div>
     <div class="chart-div" id="jaarplan-aandeel-htsm"><canvas height="450" width="600"></canvas></div>
   </div>
-  <a class="fancybox" id="{$id}" rel="group" href="#jaarplan-aandeel-htsm" title="{$popup_title}">
+  <a class="fancybox" id="{$id}" rel="group" href="#jaarplan-aandeel-htsm" title="{$popup_title?:''}">
     <div class="mega-hover">
       <div class="mega-hoverview"></div>
     </div>
