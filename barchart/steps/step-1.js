@@ -40,11 +40,15 @@ promise.get(Wizard.config.baseUrl + 'site/blocks/block-video/barchart/data/barch
 							  	},
 							  	"labels": {
 					  				"type": "string",
-					  				"default": "tw"
+					  				"default": "2012,2013,2014"
 							  	},
 							    "title": {
 							      "type": "string",
-							      "default": "Titel"
+							      "default": ""
+							    },
+							    "popup_title": {
+							      "type": "string",
+							      "default": ""
 							    },
 							    "category": {
 									"type": "string",
