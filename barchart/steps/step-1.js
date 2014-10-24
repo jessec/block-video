@@ -64,8 +64,8 @@ promise.get(Wizard.config.baseUrl + 'site/blocks/block-video/barchart/data/barch
 								"height": {
 								      "type": "number",
 								      "default": 340
-								}
-							  }
+								},
+							  },
 						},
 						// Seed the form with a starting value
 						startval : starting_value,
