@@ -31,7 +31,8 @@ promise.get(Wizard.config.baseUrl + 'site/blocks/block-video/barchart/data/barch
 					  				"default": "10,20,10",
 							  	},
 							    "title": {
-							      "type": "string"
+							      "type": "string",
+							      "title": "Titel"
 							    },
 							    "popup_title": {
 							      "type": "string"
