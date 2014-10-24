@@ -61,13 +61,12 @@ promise.get(Wizard.config.baseUrl + 'site/blocks/block-video/barchart/data/barch
 									],
 									"default": "cat-one"
 								},
-							    "width": {
-								      "type": "number",
-								      "default": 340
-								},
-								"height": {
-								      "type": "number",
-								      "default": 340
+							    "content": {
+									"type": "string",
+									"format": "html",
+									"options": {
+										"wysiwyg": true
+									},
 								},
 							  },
 						},
