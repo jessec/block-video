@@ -13,10 +13,10 @@
 {template .icon}
 <div class="mega-entry {$category} cat-all block" data-type="icon" data-src="/jaarplan-nieuw/svg-generator.php?img={$icon}&amp;txt={$txt}&amp;num={$num}" data-width="320" data-height="240">
   <div class="mega-covercaption mega-square-top mega-landscape-bottom mega-portrait-bottom">
-    <div class="mega-title">{$title}</div>
-    <div class="mega-content">{$content}</div>
+    <div class="mega-title">{$title?:''}</div>
+    <div class="mega-content">{$content?:''}</div>
   </div>
-  <a class="fancybox" id="{$id}" rel="group" href="/jaarplan-nieuw/svg-generator.php?img={$icon}&amp;txt={$txt|escapeUri}&amp;num={$num}" title="{$popup_title}" data-bkgrnd="
+  <a class="fancybox" id="{$id?:''}" rel="group" href="/jaarplan-nieuw/svg-generator.php?img={$icon}&amp;txt={$txt|escapeUri}&amp;num={$num}" title="{$popup_title?:''}" data-bkgrnd="
     {if $category == 'cat-one'}
       green
     {elseif $category == 'cat-two'}
