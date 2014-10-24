@@ -6,12 +6,10 @@ var config = {
         "properties": {
             "title": {
                 "type": "string",
-                "default": "",
                 "propertyOrder": 1
             },
             "popup_title": {
                 "type": "string",
-                "default": "",
                 "propertyOrder": 2
             },
             "category": {
@@ -54,15 +52,17 @@ var config = {
                 "default": "rocket",
                 "propertyOrder": 4
             },
+            "id": {
+				"type": "number",
+				"propertyOrder": 5
+			},
             "num": {
                 "type": "number",
-                "default": "",
-                "propertyOrder": 5
+                "propertyOrder": 6
             },
             "txt": {
                 "type": "string",
-                "default": "",
-                "propertyOrder": 6
+                "propertyOrder": 7
             },
             "content": {
                 "type": "string",
@@ -70,7 +70,7 @@ var config = {
                 "options": {
                     "wysiwyg": true
                 },
-                "propertyOrder": 7
+                "propertyOrder": 8
             }
         }
     }
