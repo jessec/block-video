@@ -22,7 +22,7 @@
   >
   <div class="mega-covercaption mega-square-top mega-landscape-bottom mega-portrait-bottom">
     <div class="mega-title">{$title?:''}</div>
-    <div class="mega-content">{$content|noAutoescape?:''}</div>
+    <div class="mega-content">{$content|noAutoescape}</div>
     <div class="chart-div" id="{$id?:''}-chart"><canvas height="450" width="600"></canvas></div>
   </div>
   <a class="fancybox" id="{$id?:''}" rel="group" href="#{$id?:''}-chart" title="{$popup_title?:''}">
