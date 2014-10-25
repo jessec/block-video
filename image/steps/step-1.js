@@ -1,5 +1,5 @@
 var config = {
-    "data": "site/blocks/block-video/icon/data/image.json",
+    "data": "site/blocks/block-video/image/data/image.json",
     "schema": {
         "type": "object",
         "title": "Image",
