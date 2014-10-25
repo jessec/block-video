@@ -1,8 +1,8 @@
 var config = {
-    "data": "site/blocks/block-video/icon/data/icon.json",
+    "data": "site/blocks/block-video/icon/data/image.json",
     "schema": {
         "type": "object",
-        "title": "Icon",
+        "title": "Image",
         "properties": {
             "title": {
                 "type": "string",
@@ -24,45 +24,13 @@ var config = {
                 "default": "cat-one",
                 "propertyOrder": 3
             },
-            "icon": {
-                "type": "string",
-                "enum": [
-                    "building",
-                    "eastholland",
-                    "events",
-                    "globe",
-                    "hands",
-                    "innovationprojects",
-                    "innovationvouchers",
-                    "knowledgevouchers",
-                    "lamp",
-                    "lamps",
-                    "milestone",
-                    "money",
-                    "patent",
-                    "people",
-                    "twente",
-                    "rocket",
-                    "scale",
-                    "sign",
-                    "speechbubble",
-                    "suitcase",
-                    "toparrangement"
-                ],
-                "default": "rocket",
-                "propertyOrder": 4
-            },
             "id": {
                 "type": "string",
-                "propertyOrder": 5
+                "propertyOrder": 4
             },
-			"num": {
-			    "type": "number",
-			    "propertyOrder": 6
-			},
-            "txt": {
+            "img": {
                 "type": "string",
-                "propertyOrder": 7
+                "propertyOrder": 5
             },
             "content": {
                 "type": "string",
@@ -70,7 +38,7 @@ var config = {
                 "options": {
                     "wysiwyg": true
                 },
-                "propertyOrder": 8
+                "propertyOrder": 6
             }
         }
     }

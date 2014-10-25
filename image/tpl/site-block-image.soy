@@ -1,0 +1,23 @@
+{namespace site.block}
+/**
+ * Kennispark image template
+ * @param id
+ * @param category
+ * @param img
+ * @param title
+ * @param popup_title
+ * @param content
+ */
+{template .image}
+<div class="mega-entry {$category} cat-all block" data-type="image" data-src="{$img?:''}" data-width="320" data-height="240">
+  <div class="mega-covercaption mega-square-top mega-landscape-bottom mega-portrait-bottom">
+    <div class="mega-title">{$title?:''}</div>
+    <div class="mega-content">{$content?:''}</div>
+  </div>
+  <a class="fancybox" id="{$id?:''}" rel="group" href="{$img?:''}" title="{$popup_title?:''}">
+    <div class="mega-hover">
+      <div class="mega-hoverview"></div>
+    </div>
+  </a>
+</div>
+{/template}
