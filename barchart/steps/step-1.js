@@ -26,40 +26,49 @@ promise.get(Wizard.config.baseUrl + 'site/blocks/block-video/barchart/data/barch
 								  		"properties": {
 								  			"name": {
 								  				"type": "string",
-								  				"default": "tw",
+								  				"default": "tw"
 								  			},
 								  			"values": {
 								  				"type": "string",
-								  				"default": "10,20,30",
+								  				"default": "10,20,30"
 								  			},
 								  		},
 								  	},
 							  	},
+							  	"id": {
+					  				"type": "string"
+							  	},
 							  	"labels": {
 					  				"type": "string",
-					  				"default": "tw",
+					  				"default": "2012,2013,2014"
 							  	},
 							    "title": {
 							      "type": "string",
-							      "default": "Titel",
+							      "default": ""
 							    },
-							    "categories": {
-							    	"type": "string",
-							    	"default": "cat-one cat-all"
+							    "popup_title": {
+							      "type": "string",
+							      "default": ""
 							    },
-							    "width": {
-								      "type": "number",
-								      "default": 340,
+							    "category": {
+									"type": "string",
+									"enum": [
+									"cat-one",
+									"cat-two",
+									"cat-three",
+									"cat-four",
+									"cat-five"
+									],
+									"default": "cat-one"
 								},
-								"height": {
-								      "type": "number",
-								      "default": 340,
+							    "content": {
+									"type": "string",
+									"format": "html",
+									"options": {
+										"wysiwyg": true
+									},
 								},
-								"background": {
-								      "type": "string",
-								      "default": "green",
-								},
-							  }
+							  },
 						},
 						// Seed the form with a starting value
 						startval : starting_value,
@@ -92,7 +101,7 @@ promise.get(Wizard.config.baseUrl + 'site/blocks/block-video/barchart/data/barch
 
 				  			var fullData = {
 				  				"meta" : meta,
-				  				"editor" : editor.getValue(),
+				  				"editor" : editor.getValue()
 				  			}
 
 				  		 	var jsonString = JSON.stringify(fullData);

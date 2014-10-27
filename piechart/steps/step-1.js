@@ -19,6 +19,9 @@ promise.get(Wizard.config.baseUrl + 'site/blocks/block-video/barchart/data/barch
 							type : "object",
 							title : "Piechart",
 							  "properties": {
+							  	"id": {
+					  				"type": "string"
+							  	},
 							  	"labels": {
 					  				"type": "string",
 					  				"default": "tw,nl,de",
@@ -29,23 +32,28 @@ promise.get(Wizard.config.baseUrl + 'site/blocks/block-video/barchart/data/barch
 							  	},
 							    "title": {
 							      "type": "string",
-							      "default": "Titel",
+							      "title": "Titel"
 							    },
-							    "categories": {
-							    	"type": "string",
-							    	"default": "cat-one cat-all"
+							    "popup_title": {
+							      "type": "string"
 							    },
-							    "width": {
-								      "type": "number",
-								      "default": 340,
+							    "category": {
+									"type": "string",
+									"enum": [
+									"cat-one",
+									"cat-two",
+									"cat-three",
+									"cat-four",
+									"cat-five"
+									],
+									"default": "cat-one"
 								},
-								"height": {
-								      "type": "number",
-								      "default": 340,
-								},
-								"background": {
-								      "type": "string",
-								      "default": "green",
+								"content": {
+									"type": "string",
+									"format": "html",
+									"options": {
+										"wysiwyg": true
+									},
 								},
 							  }
 						},
