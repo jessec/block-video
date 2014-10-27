@@ -5,7 +5,7 @@ var config = {
 		data : 'site/blocks/block-video/smallphoto/data/smallphoto.json',
 		schema : {
 			type : "object",
-			title : "Photo",
+			title : "Small Photo",
 			"properties" : {
 				"photourl" : {
 					"type" : "string",

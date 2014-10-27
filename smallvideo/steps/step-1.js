@@ -4,7 +4,7 @@ var config = {
 		data : 'site/blocks/block-video/smallvideo/data/smallvideo.json',
 		schema : {
 			type : "object",
-			title : "Video",
+			title : "Small Video",
 			  "properties": {
 			    "title": {
 			      "type": "string",

@@ -5,7 +5,7 @@ var config = {
 		data : 'site/blocks/block-video/smalltext/data/smalltext.json',
 		schema : {
 			type : "object",
-			title : "Text",
+			title : "Small Text",
 			  "properties": {
 			    "title": {
 			      "type": "string",
