@@ -2,6 +2,9 @@
 /**
  * Says hello to the world.
  * @param url1
+ * @param url2
+ * @param url3
+ * @param url4
  */
 {template .slider}
   <aside role="complementary" class="block" data-type="slider">
@@ -27,7 +30,7 @@
         <li>
         <picture>
           <!--[if IE 9]><video style="display: none;"><![endif]-->
-          <source srcset="https://placeimg.com/970/430/arch,
+          <source srcset="{$url2},
                           https://placeimg.com/970/430/arch 2x"
                            media="(min-width: 1004px)">
           <source srcset="https://placeimg.com/634/430/arch,
@@ -45,7 +48,7 @@
         <li>
         <picture>
           <!--[if IE 9]><video style="display: none;"><![endif]-->
-          <source srcset="https://placeimg.com/970/430/nature,
+          <source srcset="{$url3},
                           https://placeimg.com/970/430/nature 2x"
                            media="(min-width: 1004px)">
           <source srcset="https://placeimg.com/634/430/nature,
@@ -63,7 +66,7 @@
         <li>
         <picture>
           <!--[if IE 9]><video style="display: none;"><![endif]-->
-          <source srcset="https://placeimg.com/970/430/people,
+          <source srcset="{$url4},
                           https://placeimg.com/970/430/people 2x"
                            media="(min-width: 1004px)">
           <source srcset="https://placeimg.com/634/430/people,
