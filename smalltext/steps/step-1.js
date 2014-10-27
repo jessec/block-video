@@ -13,7 +13,7 @@ var config = {
 			    },
 			    "subtitle": {
 				      "type": "string",
-				      "default": "nieuwe title",
+				      "default": "nieuwe sub title",
 				},
 			    "text" : {
 			    	  "type": "string",
