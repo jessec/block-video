@@ -7,7 +7,7 @@
 {template .text}
 <figure class="block text {$position}" data-type="txt" data-size="300x430">
      <h2>{$title}</h2>
-     <p class="blocktext">{$text}</p>
+     <p class="blocktext">{$text|noAutoescape}</p>
 
 </figure>
 {/template}
