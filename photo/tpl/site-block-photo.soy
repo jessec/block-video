@@ -3,9 +3,10 @@
  * Says hello to the world.
  * @param url
  * @param content
+ * @param position
  */
 {template .photo}
-  <article class="block photo left" data-type="photo">
+  <article class="block photo {$position}" data-type="photo">
     <div>
       <img src="{$url}">
     </div>
