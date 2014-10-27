@@ -14,7 +14,14 @@ var config = {
 			    	  "options": {
 			    	    "wysiwyg": true
 			    	  }
-			    	}
+			    	},
+					"position": {
+		                "type": "string",
+		                "enum": [
+		                    "left",
+		                    "right"
+		                ]
+					}
 			  }
 		}
 }
