@@ -8,12 +8,6 @@ var config = {
 			      "type": "string",
 			      "default": "nieuwe title",
 			    },
-			    "height": {
-				      "type": "string",
-			    },
-				"width": {
-			      "type": "string",
-				},
 			    "url": {
 				      "type": "string",
 				      "default": "//www.youtube.com/embed/CwqSbBxUMpY",
