@@ -2,12 +2,15 @@
 /**
  * @param text
  * @param title
+ * @param subtitle
  * @param position
  */
 {template .text}
-<figure class="block text {$position}" data-type="txt" data-size="300x430">
-     <h2>{$title}</h2>
-     <p class="blocktext">{$text|noAutoescape}</p>
-
-</figure>
+ <article class="block text {$position}" data-type="text">
+    <div>
+      <h1>{$title}</h1>
+      <h2>{$subtitle}</h2>
+      {$text|noAutoescape}
+    </div>
+  </article>
 {/template}
