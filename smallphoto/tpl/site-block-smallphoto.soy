@@ -3,9 +3,10 @@
  * Says hello to the world.
  * @param photourl
  * @param content
+ * @param position
  */
 {template .smallphoto}
-  <article class="block smallphoto right" data-type="smallphoto">
+  <article class="block smallphoto {$position}" data-type="smallphoto">
     <div>
       <img src="{$photourl}" />
       <div>{$content|noAutoescape}</div>
