@@ -3,16 +3,14 @@
  *
  * @param text
  * @param title
+ * @param subtitle
  */
 {template .smalltext}
-
-{let $url}
-
-{/let}
-
-<figure class="block smalltext" data-type="txt" data-size="300x430">
-     <h2>{$title}</h2>
-     <p class="blocktext">{$text}</p>
-
-</figure>
+  <article class="block smalltext left" data-type="smalltext">
+    <div>
+      <h1>{$title}</h1>
+      <h2>{$subtitle}</h2>
+      {$text}
+    </div>
+  </article>
 {/template}

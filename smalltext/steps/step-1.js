@@ -11,6 +11,10 @@ var config = {
 			      "type": "string",
 			      "default": "nieuwe title",
 			    },
+			    "subtitle": {
+				      "type": "string",
+				      "default": "nieuwe title",
+				},
 			    "text" : {
 			    	  "type": "string",
 			    	  "format": "html",
