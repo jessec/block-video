@@ -8,7 +8,8 @@ var config = {
 			title : "Photo",
 			"properties" : {
 				"photourl" : {
-					"type" : "url"
+					"type" : "string",
+					"format" : "url"
 				},
 				"content" : {
 				  	"type": "string",
