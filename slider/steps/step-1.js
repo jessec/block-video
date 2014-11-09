@@ -23,6 +23,9 @@ function init(step) {
 
 		$('input[type=url]').on('click', function(){
 			console.log(this);
+			Core9.parent.send({
+				geturlservice : true
+			});
 		});
 
 	}
