@@ -18,5 +18,14 @@ var config = {
 
 function init(step) {
 
-	Wizard.run(step, config);
+	callback = function(){
+
+
+		$('input[type=url]').on('click', function(){
+			console.log(this);
+		});
+
+	}
+
+	Wizard.run(step, config, callback);
 }
