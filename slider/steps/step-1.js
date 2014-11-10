@@ -31,24 +31,14 @@ function init(step) {
 
 			Core9.parent.receive(function(data, event) {
 				console.log('Callback recieved data message : ');
-				console.log(data);
-				console.log('Callback recieved url data : ');
 				console.log(data.state.url);
-				console.log("name : " + test.name);
 
 				var tmpName = test.name.replace('root[','');
 				tmpName = tmpName.substring(0, tmpName.length - 1);
 
-
-				//$("input[name='"+name+"']").val(data.state.url).trigger("change");
-				//$("input[name='"+name+"']").trigger("change");
-
 				var name = editor.getEditor('root.'+tmpName);
-
-				// `getEditor` will return null if the path is invalid
 				if(name) {
 				  name.setValue(data.state.url);
-
 				  console.log(name.getValue());
 				}
 
@@ -58,10 +48,6 @@ function init(step) {
 
 	}
 
-	callback2 = function(editor){
 
-	}
-
-	//Wizard.run(step, config, callback);
 	Wizard.run(step, config, callback);
 }
