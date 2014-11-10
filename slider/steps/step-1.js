@@ -1,4 +1,4 @@
-
+var test = {};
 
 
 var config = {
@@ -18,13 +18,13 @@ var config = {
 
 function init(step) {
 
-	callback = function(){
+	callback = function(editor){
 
-		var name;
 
-		$('input[type=url]').on('click', function(){
+
+		$('input[type=url]').on('dblclick', function(){
 			console.log(this);
-			name = $(this).attr("name");
+			test.name = $(this).attr("name");
 			Core9.parent.send({
 				geturlservice : true
 			});
@@ -34,15 +34,34 @@ function init(step) {
 				console.log(data);
 				console.log('Callback recieved url data : ');
 				console.log(data.state.url);
-				console.log("name : " + name);
-				$("input[name='"+name+"']").val(data.state.url);
-				console.log('Callback recieved event message : ');
-				console.log(event);
+				console.log("name : " + test.name);
+
+				var tmpName = test.name.replace('root[','');
+				tmpName = tmpName.substring(0, tmpName.length - 1);
+
+
+				//$("input[name='"+name+"']").val(data.state.url).trigger("change");
+				//$("input[name='"+name+"']").trigger("change");
+
+				var name = editor.getEditor('root.'+tmpName);
+
+				// `getEditor` will return null if the path is invalid
+				if(name) {
+				  name.setValue(data.state.url);
+
+				  console.log(name.getValue());
+				}
+
 			});
 
 		});
 
 	}
 
+	callback2 = function(editor){
+
+	}
+
+	//Wizard.run(step, config, callback);
 	Wizard.run(step, config, callback);
 }
