@@ -56,118 +56,55 @@
  <script type="text/javascript">
 {literal}
 
+jQuery(document)
+    .ready(
+        function($) {
 
-  jQuery(document).ready(function($) {
-
-        function rightNow() {
-            if (window['performance'] && window['performance']['now']) {
-                return window['performance']['now']();
+          function rightNow() {
+            if (window['performance']
+                && window['performance']['now']) {
+              return window['performance']['now']();
             } else {
-                return +(new Date());
+              return +(new Date());
             }
-        };
+          }
 
+          var fps = 6, currentFrame = 0, totalFrames = 36, img = $("#cinemagraph")[0], currentTime = rightNow();
 
-        var fps          = 6,
-            currentFrame = 0,
-            totalFrames  = 36,
-            img          = $("#cinemagraph")[0],
-            currentTime  = rightNow();
+          // start();
 
-
-       function animloop(time) {
-            var delta = (time - currentTime) / 1000;
-
-            currentFrame += (delta * fps);
-
-            var frameNum = Math.floor(currentFrame);
-
-            if(frameNum < 0) frameNum = 0;
-
-            if (frameNum >= totalFrames) {
-              currentFrame = frameNum = 0;
+          // slider
+          $("#ess-banner").anythingSlider({
+            buildNavigation : false,
+            buildStartStop : false,
+            buildArrows : true,
+            resizeContents : true,
+            hashTags : false,
+            autoPlay : true,
+            onInitialized : function(e, slider) {
+              currentTime = rightNow();
             }
-
-            requestAnimationFrame(animloop);
-
-            img.src = "/media/video/Comp 3_000" + (frameNum < 10 ? "0" : "") + frameNum + ".jpg";
-
-            currentTime = time;
-        };
-
-        //start();
-
-      /*
-      function carousel_initCallback(carousel)
-            {
-        // Disable autoscrolling if the user clicks the prev or next button.
-        carousel.buttonNext.bind('click', function() {
-          carousel.startAuto(0);
+          })
+          // Initialize video extension
+          // see
+          // https://developers.google.com/youtube/player_parameters?hl=en#Parameters
+          // for a list of parameters
+          .anythingSliderVideo({
+            // video id prefix; suffix from
+            // $.fn.anythingSliderVideo.videoIndex
+            videoId : 'asvideo',
+            // auto load YouTube api script
+            wmode : "opaque",
+            youtubeAutoLoad : true,
+            // see:
+            // https://developers.google.com/youtube/player_parameters#Parameters
+            youtubeParams : {
+              modestbranding : 1,
+              iv_load_policy : 3,
+              fs : 1
+            }
+          });
         });
-
-        carousel.buttonPrev.bind('click', function() {
-          carousel.startAuto(0);
-        });
-
-        // Pause autoscrolling if the user moves with the cursor over the clip.
-        carousel.clip.hover(function() {
-          carousel.stopAuto();
-        }, function() {
-          carousel.startAuto();
-        });
-      };
-      $('#ess-banner').jcarousel({
-        scroll: 1,
-          wrap: 'circular',
-        auto: 5,
-            initCallback: carousel_initCallback,
-          itemFallbackDimension: 940,
-          buttonNextCallback: function(carousel, item, state) {
-            if (!state)
-              $(item).hide();
-            else
-              $(item).show();
-          },
-          buttonPrevCallback: function(carousel, item, state) {
-            if (!state)
-              $(item).hide();
-            else
-              $(item).show();
-          }
-      });
-
-
-
-            */
-           // slider
-            $("#ess-banner").anythingSlider({
-                    buildNavigation     : false,
-                    buildStartStop      : false,
-                    buildArrows         : true,
-          resizeContents      : true,
-                    hashTags            : false,
-          autoPlay      : true,
-                    onInitialized       : function(e, slider) {
-                        currentTime = rightNow();
-                        //animloop(rightNow()); //TODO: reset!
-                    }
-                })
-        // Initialize video extension
-        // see https://developers.google.com/youtube/player_parameters?hl=en#Parameters for a list of parameters
-        .anythingSliderVideo({
-          // video id prefix; suffix from $.fn.anythingSliderVideo.videoIndex
-          videoId : 'asvideo',
-          // auto load YouTube api script
-                    wmode           : "opaque",
-          youtubeAutoLoad : true,
-          // see: https://developers.google.com/youtube/player_parameters#Parameters
-          youtubeParams: {
-            modestbranding : 1,
-            iv_load_policy : 3,
-            fs : 1
-          }
-        });
-  });
   {/literal}
 </script>
   </aside>
