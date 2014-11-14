@@ -2,10 +2,6 @@
 var closeimagelink = "lighterbox2/close.gif"
 var nextimagelink = "lighterbox2/next.gif"
 var previmagelink = "lighterbox2/prev.gif"
-/*var IE6 = (navigator.userAgent.indexOf("MSIE 6") >= 0)
-var safari = (navigator.userAgent.indexOf("Safari") >= 0)
-var IE = (navigator.userAgent.indexOf("MSIE") >= 0)
-var opera = (navigator.userAgent.indexOf("Opera") >= 0)*/
 var tb = document.getElementsByTagName('body')
 var lbox = document.createElement("div")
 var llocation
