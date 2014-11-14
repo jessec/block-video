@@ -1,0 +1,86 @@
+{namespace site.block}
+/**
+ * Says hello to the world.
+ * @param url1
+ * @param url2
+ * @param url3
+ * @param url4
+ */
+{template .anythingslider}
+  <aside role="complementary" class="block" data-type="slider">
+      <ul class="css-slideshow">
+        <li>
+        <picture>
+          <!--[if IE 9]><video style="display: none;"><![endif]-->
+          <source srcset="{$url1},
+                          https://placeimg.com/970/430/tech 2x"
+                           media="(min-width: 1004px)">
+          <source srcset="https://placeimg.com/634/430/tech,
+                          https://placeimg.com/634/430/tech 2x"
+                          media="(min-width: 704px)">
+          <source srcset="https://placeimg.com/300/430/tech,
+                          https://placeimg.com/300/430/tech 2x"
+                          media="(min-width: 350px)">
+          <!--[if IE 9]></video><![endif]-->
+          <img srcset="https://placeimg.com/300/430/tech,
+                       https://placeimg.com/300/430/tech 2x"
+                       alt="A giant stone face at The ">
+          </picture>
+        </li>
+        <li>
+        <picture>
+          <!--[if IE 9]><video style="display: none;"><![endif]-->
+          <source srcset="{$url2},
+                          https://placeimg.com/970/430/arch 2x"
+                           media="(min-width: 1004px)">
+          <source srcset="https://placeimg.com/634/430/arch,
+                          https://placeimg.com/634/430/arch 2x"
+                          media="(min-width: 704px)">
+          <source srcset="https://placeimg.com/300/430/arch,
+                          https://placeimg.com/300/430/arch 2x"
+                          media="(min-width: 350px)">
+          <!--[if IE 9]></video><![endif]-->
+          <img srcset="https://placeimg.com/300/430/arch,
+                       https://placeimg.com/300/430/arch 2x"
+                       alt="A giant stone face at The ">
+          </picture>
+        </li>
+        <li>
+        <picture>
+          <!--[if IE 9]><video style="display: none;"><![endif]-->
+          <source srcset="{$url3},
+                          https://placeimg.com/970/430/nature 2x"
+                           media="(min-width: 1004px)">
+          <source srcset="https://placeimg.com/634/430/nature,
+                          https://placeimg.com/634/430/nature 2x"
+                          media="(min-width: 704px)">
+          <source srcset="https://placeimg.com/300/430/nature,
+                          https://placeimg.com/300/430/nature 2x"
+                          media="(min-width: 350px)">
+          <!--[if IE 9]></video><![endif]-->
+          <img srcset="https://placeimg.com/300/430/nature,
+                       https://placeimg.com/300/430/nature 2x"
+                       alt="A giant stone face at The ">
+          </picture>
+        </li>
+        <li>
+        <picture>
+          <!--[if IE 9]><video style="display: none;"><![endif]-->
+          <source srcset="{$url4},
+                          https://placeimg.com/970/430/people 2x"
+                           media="(min-width: 1004px)">
+          <source srcset="https://placeimg.com/634/430/people,
+                          https://placeimg.com/634/430/people 2x"
+                          media="(min-width: 704px)">
+          <source srcset="https://placeimg.com/300/430/people,
+                          https://placeimg.com/300/430/people 2x"
+                          media="(min-width: 350px)">
+          <!--[if IE 9]></video><![endif]-->
+          <img srcset="https://placeimg.com/300/430/people,
+                       https://placeimg.com/300/430/people 2x"
+                       alt="A giant stone face at The ">
+          </picture>
+        </li>
+      </ul>
+  </aside>
+{/template}
