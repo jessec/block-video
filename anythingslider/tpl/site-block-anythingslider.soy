@@ -60,4 +60,31 @@
 
 
   </aside>
+    <script>
+{literal}
+
+jQuery(document)
+    .ready(
+        function($) {
+
+          $("#ess-banner").anythingSlider({
+            buildNavigation : false,
+            buildStartStop : false,
+            buildArrows : true,
+            resizeContents : true,
+            hashTags : false,
+            autoPlay : false,
+            onInitialized : function(e, slider) {
+              currentTime = new Date();
+                  $("a.next-slide").click(function(){
+                      slider.goForward();
+                  });
+                  $("a.prev-slide").click(function(){
+                      slider.goBack();
+                  });
+            }
+          });
+        });
+{/literal}
+</script>
 {/template}
