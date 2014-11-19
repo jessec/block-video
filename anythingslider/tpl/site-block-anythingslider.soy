@@ -1,0 +1,89 @@
+{namespace site.block}
+/**
+ * Says hello to the world.
+ * @param url1
+ * @param url2
+ * @param url3
+ * @param url4
+ */
+{template .anythingslider}
+  <aside role="complementary" class="core9-block anythingslider" data-type="anythingslider">
+  <!--
+  {$url1}{$url2}{$url3}{$url4}
+  -->
+
+<div class="anythingSlider anythingSlider-default activeSlider anythingSlider-hovered" style="width: 940px; height: 400px;"><div class="anythingWindow"><ul id="ess-banner" class="jcarousel-skin-ess anythingBase horizontal" style="width: 7520px; left: -940px;"><li class="cloned panel" style="width: 940px; height: 400px;">
+    <a href="aquajewels-inspiration" disabled="disabled" name="" style="width: 100%; height: 100%;">
+      <img src="http://www.easydrain.nl/media/Doucheput-Easy-Drain-Aqua-Jewels.png" title="Creëer uw droombadkamer met Easy Drain Aqua Jewels" alt="Creëer uw droombadkamer met Easy Drain Aqua Jewels" style="width:940px; height:400px;">
+    </a>
+  </li>
+      <li class="panel activePage" style="width: 940px; height: 400px;">
+    <a href="/nl/news/vakbeurzen-evenementen/beurs-get-nord-2014.html" style="width: 100%; height: 100%;">
+      <img src="http://www.easydrain.nl/media/Kom_ons_bezoeken_in_Hamburg_op_GET_Nord_2014.jpg" title="Kom ons bezoeken in Hamburg op GET Nord 2014" alt="Kom ons bezoeken in Hamburg op GET Nord 2014" style="width:940px; height:400px;">
+    </a>
+  </li>
+    <li class="panel" style="width: 940px; height: 400px;">
+    <a href="/nl/easy-drain/aqua.html" style="width: 100%; height: 100%;">
+      <img src="http://www.easydrain.nl/media/Doucheput-Easy-Drain-Aqua.jpg" title="De elegante serie Aqua doucheputten" alt="De elegante serie Aqua doucheputten" style="width:940px; height:400px;">
+    </a>
+  </li>
+    <li class="panel" style="width: 940px; height: 400px;">
+    <a href="/nl/easy-drain/wtw.html" style="width: 100%; height: 100%;">
+      <img src="http://www.easydrain.nl/media/Easy-Drain-WTW-douchegoot-systeem.jpg" title=" WTW systeem voor Easy Drain douchegoten en doucheputten" alt=" WTW systeem voor Easy Drain douchegoten en doucheputten" style="width:940px; height:400px;">
+    </a>
+  </li>
+    <li class="panel" style="width: 940px; height: 400px;">
+    <a href="xs-inspiration" style="width: 100%; height: 100%;">
+      <img src="http://www.easydrain.nl/media/Douchegoot-Easy-Drain-Xs.jpg" title="Creëer uw droombadkamer met Easy Drain Xs" alt="Creëer uw droombadkamer met Easy Drain Xs" style="width:940px; height:400px;">
+    </a>
+  </li>
+    <li class="panel" style="width: 940px; height: 400px;">
+    <a href="modulo-inspiration" style="width: 100%; height: 100%;">
+      <img src="http://www.easydrain.nl/media/Douchegoot-Easy-Drain-Modulo-Design.png" title="Creëer uw droombadkamer met Easy Drain Modulo" alt="Creëer uw droombadkamer met Easy Drain Modulo" style="width:940px; height:400px;">
+    </a>
+  </li>
+    <li class="panel" style="width: 940px; height: 400px;">
+    <a href="aquajewels-inspiration" style="width: 100%; height: 100%;">
+      <img src="http://www.easydrain.nl/media/Doucheput-Easy-Drain-Aqua-Jewels.png" title="Creëer uw droombadkamer met Easy Drain Aqua Jewels" alt="Creëer uw droombadkamer met Easy Drain Aqua Jewels" style="width:940px; height:400px;">
+    </a>
+  </li>
+  <li class="cloned panel" style="width: 940px; height: 400px;">
+    <a href="/nl/news/vakbeurzen-evenementen/beurs-get-nord-2014.html" disabled="disabled" name="" style="width: 100%; height: 100%;">
+      <img src="http://www.easydrain.nl/media/Kom_ons_bezoeken_in_Hamburg_op_GET_Nord_2014.jpg" title="Kom ons bezoeken in Hamburg op GET Nord 2014" alt="Kom ons bezoeken in Hamburg op GET Nord 2014" style="width:940px; height:400px;">
+    </a>
+  </li></ul></div>
+
+  <span class="arrow back"><a class="prev-slide" href="#"><span>«</span></a></span>
+  <span class="arrow forward"><a class="next-slide" href="#"><span>»</span></a></span>
+
+  </div>
+    <script>
+{literal}
+
+jQuery(document)
+    .ready(
+        function($) {
+
+          $("#ess-banner").anythingSlider({
+            buildNavigation : false,
+            buildStartStop : false,
+            buildArrows : true,
+            resizeContents : true,
+            hashTags : false,
+            autoPlay : false,
+            onInitialized : function(e, slider) {
+              currentTime = new Date();
+                  $("a.next-slide").click(function(){
+                      slider.goForward();
+                  });
+                  $("a.prev-slide").click(function(){
+                      slider.goBack();
+                  });
+            }
+          });
+        });
+{/literal}
+</script>
+
+  </aside>
+{/template}

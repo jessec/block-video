@@ -1,4 +1,4 @@
-
+var test = {};
 
 
 var config = {
@@ -18,5 +18,36 @@ var config = {
 
 function init(step) {
 
-	Wizard.run(step, config);
+	callback = function(editor){
+
+
+
+		$('input[type=url]').on('dblclick', function(){
+			console.log(this);
+			test.name = $(this).attr("name");
+			Core9.parent.send({
+				geturlservice : true
+			});
+
+			Core9.parent.receive(function(data, event) {
+				console.log('Callback recieved data message : ');
+				console.log(data.state.url);
+
+				var tmpName = test.name.replace('root[','');
+				tmpName = tmpName.substring(0, tmpName.length - 1);
+
+				var name = editor.getEditor('root.'+tmpName);
+				if(name) {
+				  name.setValue(data.state.url);
+				  console.log(name.getValue());
+				}
+
+			});
+
+		});
+
+	}
+
+
+	Wizard.run(step, config, callback);
 }
