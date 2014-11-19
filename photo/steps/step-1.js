@@ -11,6 +11,9 @@ var config = {
 					"type" : "string",
 					"format" : "url"
 				},
+	            "alt": {
+	                "type": "string"
+	            },
 				"content" : {
 				  	"type": "string",
 		    	  	"format": "html",

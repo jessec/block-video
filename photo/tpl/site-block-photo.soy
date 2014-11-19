@@ -4,11 +4,12 @@
  * @param url
  * @param content
  * @param position
+ * @param alt
  */
 {template .photo}
   <article class="block photo {$position}" data-type="photo">
     <div>
-      <img src="{$url}">
+      <img src="{$url}" alt="{$alt}">
     </div>
     <p>{$content|noAutoescape}</p>
   </article>
