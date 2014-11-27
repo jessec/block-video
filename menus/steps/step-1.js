@@ -1,5 +1,5 @@
 var config = {
-		data : 'site/blocks/block-video/text/data/text.json',
+		data : 'site/blocks/block-video/menus/data/menus.json',
 		schema : {
 			"title": "menus",
             "type": "object",

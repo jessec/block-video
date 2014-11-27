@@ -1,15 +1,22 @@
- [
-            {
-                "heading": "test",
-                "items": [
-                    {
-                        "link": "testa",
-                        "title": "asdfasdf"
-                    },
-                    {
-                        "link": "asdfasdf",
-                        "title": "asdfasdf"
-                    }
-                ]
-            }
-]
+{
+    "menus": [
+        {
+            "heading": "test",
+            "items": [
+                {
+                    "link": "test",
+                    "title": "test"
+                }
+            ]
+        },
+        {
+            "heading": "asdfaasd",
+            "items": [
+                {
+                    "link": "sdfa",
+                    "title": "asdfddd"
+                }
+            ]
+        }
+    ]
+}
