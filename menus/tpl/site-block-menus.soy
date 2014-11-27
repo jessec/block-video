@@ -1,0 +1,16 @@
+{namespace site.block}
+/**
+ * @param text
+ * @param title
+ * @param subtitle
+ * @param position
+ */
+{template .menus}
+ <article class="core9-block text {$position}" data-type="text">
+    <div>
+      <h1>{$title}</h1>
+      <h2>{$subtitle}</h2>
+      {$text|noAutoescape}
+    </div>
+  </article>
+{/template}
