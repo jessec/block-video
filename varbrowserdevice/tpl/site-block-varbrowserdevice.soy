@@ -1,0 +1,16 @@
+{namespace site.block}
+/**
+ * Says hello to the world.
+ * @param url
+ * @param content
+ * @param position
+ * @param alt
+ */
+{template .varbrowserdevice}
+  <article class="core9-block photo {$position}" data-type="photo">
+    <div>
+      <img src="{$url}" alt="{$alt}">
+    </div>
+    <p>{$content|noAutoescape}</p>
+  </article>
+{/template}
