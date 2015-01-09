@@ -7,14 +7,205 @@
  * @param alt
  */
 {template .varbrowserdevice}
-  <article class="core9-block photo {$position}" data-type="photo">
+  <article class="core9-block varbrowserdevice {$position}" data-type="varbrowserdevice">
     <div>
       <img src="{$url}" alt="{$alt}">
     </div>
     <p>{$content|noAutoescape}</p>
     
-    mm
+ <div class="conditions-ui-col no-clear">
+  <label class="col-title">Audience Conditions</label>
+
+  <h5 class="col-title">A visitor will fall into this audience if:</h5>
+
+  <div class="root-condition-group">
+
+    <div class="condition-group">
+      
+      <div class="condition">
+  <div class="condition-title-row">
     
+  Visitor 
+  <select class="condition__negate">
+    <option value="false">is</option>
+    <option value="true">is not</option>
+  </select>
+  using any of these <strong>browsers</strong>:
+
+  </div>
+  <div class="condition-value-row">
+    <div class="or-col">
+      <!--vue-if-->
+    </div>
+    <div class="value-col">
+      
+  
+    
+
+<select class="condition__value">
+  
+  
+    
+      <optgroup label="Mobile">
+        
+  
+  <option value="mobile">
+    Any mobile browser
+  </option>
+  
+  <option value="android">
+    Android (any browser)
+  </option>
+  
+  <option value="blackberry">
+    Blackberry (any browser)
+  </option>
+  
+  <option value="ipad">
+    iPad (any browser)
+  </option>
+  
+  <option value="iphone">
+    iPhone (any browser)
+  </option>
+  
+  <option value="windows phone">
+    Windows Phone (any browser)
+  </option>
+  
+
+      </optgroup>
+    
+      <optgroup label="Firefox">
+        
+  
+  <option value="ff2">
+    Firefox 2
+  </option>
+  
+  <option value="ff3">
+    Firefox 3
+  </option>
+  
+  <option value="ff4">
+    Firefox 4
+  </option>
+  
+  <option value="ff">
+    Firefox (any Desktop version)
+  </option>
+  
+
+      </optgroup>
+    
+      <optgroup label="Internet Explorer">
+        
+  
+  <option value="ie6" disabled="">
+    Internet Explorer 6 (Deprecated)
+  </option>
+  
+  <option value="ie7" disabled="">
+    Internet Explorer 7 (Deprecated)
+  </option>
+  
+  <option value="ie8">
+    Internet Explorer 8
+  </option>
+  
+  <option value="ie9">
+    Internet Explorer 9
+  </option>
+  
+  <option value="ie10">
+    Internet Explorer 10
+  </option>
+  
+  <option value="ie11">
+    Internet Explorer 11
+  </option>
+  
+
+      </optgroup>
+    
+      <optgroup label="Safari (Desktop)">
+        
+  
+  <option value="safari3">
+    Safari 3
+  </option>
+  
+  <option value="safari4">
+    Safari 4
+  </option>
+  
+  <option value="safari5">
+    Safari 5
+  </option>
+  
+  <option value="safari6">
+    Safari 6
+  </option>
+  
+  <option value="safari7">
+    Safari 7
+  </option>
+  
+  <option value="safari8">
+    Safari 8
+  </option>
+  
+
+      </optgroup>
+    
+      <optgroup label="Other">
+        
+  
+  <option value="gc">
+    Google Chrome
+  </option>
+  
+  <option value="opera">
+    Opera
+  </option>
+  
+
+      </optgroup>
+    
+  
+</select>
+  
+
+    </div>
+    
+    <div class="actions-col">
+      
+      <button type="button" class="add-condition-button">
+      </button>
+      <button type="button" class="delete-condition-button">
+      </button>
+      
+    </div><!--vue-if-->
+  </div><!--v-repeat-conditionGroup.conditions-->
+  
+</div>
+      <!--vue-if-->
+    </div><!--v-repeat-conditionGroup.conditions-->
+    <div class="drop-target and-or-condition v-drop-target">
+      Drop <strong>'or'</strong> conditions here.
+    </div>
+
+    <div class="logical-type-label">and also...</div><!--vue-if-->
+    <!--vue-if-->
+  </div><!--v-repeat-rootConditionGroup.conditions-->
+
+  <div class="drop-target v-drop-target drag-hover">
+      <span>
+        Drop <strong>'and'</strong> conditions here.
+      </span><!--vue-if-->
+      <!--vue-if-->
+  </div>
+</div>
     
     
   </article>
