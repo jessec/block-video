@@ -9,11 +9,11 @@ var config = {
 			"pets" : {
 				"type" : "array",
 				"format" : "table",
-				"title" : "Pets",
+				"title" : "Browsers",
 				"uniqueItems" : true,
 				"items" : {
 					"type" : "object",
-					"title" : "Pet",
+					"title" : "Browser",
 					"properties" : {
 						"case" : {
 							"type" : "string",
