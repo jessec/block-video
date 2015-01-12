@@ -1,14 +1,19 @@
 {namespace site.block}
 /**
  * Says hello to the world.
- * @param case
- * @param browser
+ * @param browsers
  */
 {template .varbrowserdevice}
   <article class="core9-block varbrowserdevice" data-type="varbrowserdevice">
 
 	<table>
-		<tr><td>Visitor {$case} using any of these browsers:</td><td>{$browser}</td></tr>
+	
+	{foreach $browser in $browsers}
+	
+		<tr><td>Visitor {$browser.case} using any of these browsers:</td><td>{$browser.type}</td></tr>
+		
+	{/foreach}	
+		
 	</table>
     
     

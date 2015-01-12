@@ -6,7 +6,7 @@ var config = {
 		title : "varbrowserdevice",
 		"properties" : {
 
-			"pets" : {
+			"browsers" : {
 				"type" : "array",
 				"format" : "table",
 				"title" : "Browsers",
@@ -20,7 +20,7 @@ var config = {
 							"enum" : [ "is", "is_not" ],
 							"default" : "is"
 						},
-						"browser" : {
+						"type" : {
 							"type" : "string",
 							"enum" : [ "cat", "dog", "bird", "reptile", "other" ],
 							"default" : "dog"
