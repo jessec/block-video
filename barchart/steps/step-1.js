@@ -55,9 +55,9 @@ var config = {
 					"options": {
 						"wysiwyg": true
 					},
-				},
-			  },
-		},
+				}
+			  }
+		}
 }
 
 
