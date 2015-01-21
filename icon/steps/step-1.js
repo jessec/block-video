@@ -66,10 +66,7 @@ var config = {
             },
             "content": {
                 "type": "string",
-                "format": "html",
-                "options": {
-                    "wysiwyg": true
-                },
+                "format": "textarea",
                 "propertyOrder": 8
             }
         }
@@ -79,5 +76,47 @@ var config = {
 
 function init(step) {
 
-	Wizard.run(step, config);
+	callback = function(editor){
+
+		var test = {};
+
+		$('textarea').on('dblclick', function(){
+			
+			// send to parent
+			console.log("get wysywig");
+			console.log(this);
+			test.name = $(this).attr("name");
+			Core9.parent.send({
+				getwysiwyg : true
+			});
+
+			
+			// send to parent 
+			
+			// recieve from parent.
+			
+			Core9.parent.receive(function(data, event) {
+
+				console.log("form is recieving data : ");
+				console.log(data);
+				
+				/*				console.log('Callback recieved data message : ');
+				console.log(data.state.url);
+
+				var tmpName = test.name.replace('root[','');
+				tmpName = tmpName.substring(0, tmpName.length - 1);
+
+				var name = editor.getEditor('root.'+tmpName);
+				if(name) {
+				  name.setValue(data.state.url);
+				  console.log(name.getValue());
+				}*/
+
+			});
+
+		});
+
+	}
+	
+	Wizard.run(step, config, callback);
 }
