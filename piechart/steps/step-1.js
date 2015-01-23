@@ -1,115 +1,91 @@
-function init(step){
 
-	console.log(Wizard.config.baseUrl);
+var config = {
+	data : 'site/blocks/block-video/piechart/data/piechart.json',
+	schema : {
+		type : "object",
+		title : "Piechart",
+		  "properties": {
+		  	"id": {
+					"type": "string"
+		  	},
+		  	"labels": {
+					"type": "string",
+					"default": "tw,nl,de",
+		  	},
+		  	"values": {
+					"type": "string",
+					"default": "10,20,10",
+		  	},
+		    "title": {
+		      "type": "string",
+		      "title": "Titel"
+		    },
+		    "popup_title": {
+		      "type": "string"
+		    },
+		    "category": {
+				"type": "string",
+				"enum": [
+				"cat-one",
+				"cat-two",
+				"cat-three",
+				"cat-four",
+				"cat-five"
+				],
+				"default": "cat-one"
+			},
+			"content": {
+				"type": "string",
+				"format": "textarea"
+			}
+		  }
+		}
+}
 
-promise.get(Wizard.config.baseUrl + 'site/blocks/block-video/barchart/data/barchart.json').then(
-				function(error, text, xhr) {
-					if (error) {
-						alert('Error ' + xhr.status);
-						return;
-					}
-					var starting_value = [ text ];
-					// Initialize the editor
-					var editor = new JSONEditor(document
-							.getElementById('editor_holder-' + step), {
-						// Enable fetching schemas via ajax
-						ajax : true,
-						// The schema for the editor
-						schema : {
-							type : "object",
-							title : "Piechart",
-							  "properties": {
-							  	"id": {
-					  				"type": "string"
-							  	},
-							  	"labels": {
-					  				"type": "string",
-					  				"default": "tw,nl,de",
-							  	},
-							  	"values": {
-					  				"type": "string",
-					  				"default": "10,20,10",
-							  	},
-							    "title": {
-							      "type": "string",
-							      "title": "Titel"
-							    },
-							    "popup_title": {
-							      "type": "string"
-							    },
-							    "category": {
-									"type": "string",
-									"enum": [
-									"cat-one",
-									"cat-two",
-									"cat-three",
-									"cat-four",
-									"cat-five"
-									],
-									"default": "cat-one"
-								},
-								"content": {
-									"type": "string",
-									"format": "html",
-									"options": {
-										"wysiwyg": true
-									},
-								},
-							  }
-						},
-						// Seed the form with a starting value
-						startval : starting_value,
-						// Disable additional properties
-						no_additional_properties : true,
-						disable_edit_json : true,
-						disable_properties : true,
-						disable_collapse : true,
-						// Require all properties by default
-						required_by_default : true
-					});
-				      // Hook up the submit button to log to the console
-				      document.getElementById('submit-' + step).addEventListener('click',function(event) {
-				    	  	event.stopPropagation();
-				    	  	console.log(editor.validate());
-				    	  	Wizard.goToNextStep(event);
-				    	  	console.log('sending to swagger api');
-				    	  	console.log(editor.getValue());
+var test = {};
+function init(step) {
 
-				  			var hash = location.hash.split('=');
-				  			var data = hash[1].split('-');
-				  			var meta = {
-								"absolute-url" : document.getElementById('iframe').getAttribute('src'),
-								"state" : data[0],
-								"block" : data[2],
-								"type" : data[4],
-								"template" : Wizard.widgetJson[data[4]].template
-				  			}
-				  			console.log(meta);
+	callback = function(editor){
+		$("<button type='button'>Show Content</button>").insertAfter("textarea");
+		$("textarea").css("display", "none");
+		$("button").on("click", function(){
+			var textArea = $(this).prev();
+			Core9.name = textArea.attr("name");
+				var tmpName = Core9.name.replace('root[','');
+				tmpName = tmpName.substring(0, tmpName.length - 1);
+				var name = editor.getEditor('root.'+tmpName);
+				var data = {};
+				if(name) {
+				  data = name.getValue();
+				}
 
-				  			var fullData = {
-				  				"meta" : meta,
-				  				"editor" : editor.getValue(),
-				  			}
+			Core9.parent.send({
+				getwysiwyg : true,
+				payload : data
+			});
 
-				  		 	var jsonString = JSON.stringify(fullData);
+			
+			// send to parent
+			
+			// recieve from parent.
+			
+			Core9.parent.receive(function(data, event) {
 
-				  			var data = {
-				    			  "id" : 112,
-				    			  "data" : jsonString
-				    			};
+				console.log("form is recieving data : ");
+				console.log(data);
+				var tmpName = Core9.name.replace('root[','');
+				tmpName = tmpName.substring(0, tmpName.length - 1);
 
-				  			promise.post(location.origin +'/api/block', data).then(
-				  					function(error, text, xhr) {
-				  						if (error) {
-				  							alert('Error ' + xhr.status);
-				  							return;
-				  						}
-				  						console.log(text);
-				  						document.getElementById('iframe').contentWindow.location = location.href;
-				  					});
+				var name = editor.getEditor('root.'+tmpName);
+				if(name) {
+				  name.setValue(data.state.content);
+				}
 
-				      });
+			});
 
-				});
+		});
 
+	}
+	
+	Wizard.run(step, config, callback);
 }
