@@ -17,9 +17,9 @@ var config = {
 						"values" : {
 							"type" : "string",
 							"default" : "10,20,30"
-						},
-					},
-				},
+						}
+					}
+				}
 			},
 			"id" : {
 				"type" : "string"

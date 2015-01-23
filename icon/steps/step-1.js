@@ -73,21 +73,26 @@ var config = {
     }
 }
 
-
+var test = {};
 function init(step) {
 
 	callback = function(editor){
+		$("<button type='button'>Show Content</button>").insertAfter("textarea");
+		$("textarea").css("display", "none");
+		$("button").on("click", function(){
+			var textArea = $(this).prev();
+			Core9.name = textArea.attr("name");
+				var tmpName = Core9.name.replace('root[','');
+				tmpName = tmpName.substring(0, tmpName.length - 1);
+				var name = editor.getEditor('root.'+tmpName);
+				var data = {};
+				if(name) {
+				  data = name.getValue();
+				}
 
-		var test = {};
-
-		$('textarea').on('dblclick', function(){
-			
-			// send to parent
-			console.log("get wysywig");
-			console.log(this);
-			test.name = $(this).attr("name");
 			Core9.parent.send({
-				getwysiwyg : true
+				getwysiwyg : true,
+				payload : data
 			});
 
 			
@@ -99,18 +104,13 @@ function init(step) {
 
 				console.log("form is recieving data : ");
 				console.log(data);
-				
-				/*				console.log('Callback recieved data message : ');
-				console.log(data.state.url);
-
-				var tmpName = test.name.replace('root[','');
+				var tmpName = Core9.name.replace('root[','');
 				tmpName = tmpName.substring(0, tmpName.length - 1);
 
 				var name = editor.getEditor('root.'+tmpName);
 				if(name) {
-				  name.setValue(data.state.url);
-				  console.log(name.getValue());
-				}*/
+				  name.setValue(data.state.content);
+				}
 
 			});
 
