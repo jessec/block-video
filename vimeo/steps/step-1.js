@@ -2,7 +2,7 @@ var config = {
     "data": "site/blocks/block-video/vimeo/data/vimeo.json",
     "schema": {
         "type": "object",
-        "title": "Video",
+        "title": "Vimeo",
         "properties": {
             "title": {
                 "type": "string",
