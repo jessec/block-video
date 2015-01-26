@@ -14,14 +14,14 @@ var config = {
             },
             "category": {
                 "type": "string",
-                "enum": [
-                    "cat-one",
-                    "cat-two",
-                    "cat-three",
-                    "cat-four",
-                    "cat-five"
+                "enum" : [
+                    "start-grow",
+                    "innovate",
+                    "settle",
+                    "general",
+                    "milestones"
                 ],
-                "default": "cat-one",
+                "default": "start-grow",
                 "propertyOrder": 3
             },
             "id": {

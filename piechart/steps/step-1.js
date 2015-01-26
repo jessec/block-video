@@ -25,14 +25,14 @@ var config = {
 		    },
 		    "category": {
 				"type": "string",
-				"enum": [
-				"cat-one",
-				"cat-two",
-				"cat-three",
-				"cat-four",
-				"cat-five"
-				],
-				"default": "cat-one"
+				"enum" : [
+                    "start-grow",
+                    "innovate",
+                    "settle",
+                    "general",
+                    "milestones"
+                ],
+				"default": "start-grow"
 			},
 			"content": {
 				"type": "string",
