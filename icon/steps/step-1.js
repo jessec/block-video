@@ -28,6 +28,7 @@ var config = {
                 "type": "string",
                 "enum": [
                     "building",
+                    "coffee",
                     "eastholland",
                     "events",
                     "fund",
