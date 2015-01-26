@@ -30,6 +30,7 @@ var config = {
                     "building",
                     "eastholland",
                     "events",
+                    "funds",
                     "globe",
                     "hands",
                     "innovationprojects",
@@ -47,7 +48,8 @@ var config = {
                     "sign",
                     "speechbubble",
                     "suitcase",
-                    "toparrangement"
+                    "toparrangement",
+                    "website"
                 ],
                 "default": "rocket",
                 "propertyOrder": 4
