@@ -17,15 +17,15 @@
     <div class="mega-content">{$content?:''|noAutoescape}</div>
   </div>
   <a class="fancybox icon" id="{$id?:''}" rel="group" href="/jaarplan-nieuw/svg-generator.php?img={$icon}&amp;txt={$txt|escapeUri}&amp;num={$num}" title="{$popup_title?:''}" data-bkgrnd="
-    {if $category == 'cat-one'}
+    {if $category == 'start-grow'}
       green
-    {elseif $category == 'cat-two'}
+    {elseif $category == 'innovate'}
       pink
-    {elseif $category == 'cat-three'}
+    {elseif $category == 'settle'}
       red
-    {elseif $category == 'cat-four'}
+    {elseif $category == 'general'}
       blue
-    {elseif $category == 'cat-five'}
+    {elseif $category == 'milestones'}
       purple
     {/if}">
     <div class="mega-hover">
