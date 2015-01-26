@@ -8,6 +8,7 @@
  * @param popup_title
  * @param content
  * @param labels
+ * @param scale
  */
 {template .barchart}
 <div class="mega-entry {$category} cat-all core9-block" 
@@ -18,6 +19,7 @@
      {foreach $bar in $bars}
        data-{$bar.name}="{$bar.values}"
      {/foreach}
+     data-scale="{$scale?:''}"
      data-width="320" data-height="240"
   >
   <div class="mega-covercaption mega-square-top mega-landscape-bottom mega-portrait-bottom">
