@@ -30,7 +30,7 @@ var config = {
                     "building",
                     "eastholland",
                     "events",
-                    "funds",
+                    "fund",
                     "globe",
                     "hands",
                     "innovationprojects",
