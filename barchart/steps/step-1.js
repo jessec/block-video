@@ -28,6 +28,10 @@ var config = {
 				"type" : "string",
 				"default" : "2012,2013,2014"
 			},
+			"scale" : {
+				"type" : "string",
+				"enum" : [ "", "procent" ]
+			},
 			"title" : {
 				"type" : "string",
 				"default" : ""
