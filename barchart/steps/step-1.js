@@ -30,7 +30,7 @@ var config = {
 			},
 			"scale" : {
 				"type" : "string",
-				"enum" : [ "", "procent" ]
+				"default" : "procent"
 			},
 			"title" : {
 				"type" : "string",
