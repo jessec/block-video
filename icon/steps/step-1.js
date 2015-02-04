@@ -12,16 +12,27 @@ var config = {
                 "type": "string",
                 "propertyOrder": 2
             },
-            "category": {
-                "type": "string",
-                "enum" : [
-                    "start-grow",
-                    "innovate",
-                    "settle",
-                    "general",
-                    "milestones"
-                ],
-                "default": "start-grow",
+            "categories": {
+                "type": "array",
+                "title": "Categories",
+                "uniqueItems": true,
+                "items": {
+                    "type": "object",
+                    "title": "Category",
+                    "properties": {
+                        "type": {
+                            "type": "string",
+                            "enum" : [
+                                "start-grow",
+                                "innovate",
+                                "settle",
+                                "general",
+                                "milestones"
+                            ],
+                            "default": "start-grow"
+                        }
+                    }
+                },
                 "propertyOrder": 3
             },
             "icon": {

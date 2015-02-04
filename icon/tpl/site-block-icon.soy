@@ -2,7 +2,7 @@
 /**
  * Kennispark icon template
  * @param id
- * @param category
+ * @param categories
  * @param icon
  * @param txt
  * @param num
@@ -11,7 +11,10 @@
  * @param content
  */
 {template .icon}
-<div class="mega-entry {$category} cat-all core9-block" data-type="icon" data-src="/jaarplan-nieuw/svg-generator.php?img={$icon}&amp;txt={$txt}&amp;num={$num}" data-width="320" data-height="240">
+<div class="mega-entry {foreach $category in $categories}
+  {if not isFirst($category)} ' ' {/if}
+  {$category}
+{/foreach} cat-all core9-block" data-type="icon" data-src="/jaarplan-nieuw/svg-generator.php?img={$icon}&amp;txt={$txt}&amp;num={$num}" data-width="320" data-height="240">
   <div class="mega-covercaption mega-square-top mega-landscape-bottom mega-portrait-bottom">
     <div class="mega-title">{$title?:''}</div>
     <div class="mega-content">{$content?:''|noAutoescape}</div>
