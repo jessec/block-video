@@ -10,11 +10,11 @@ var config = {
 		  	},
 		  	"labels": {
 					"type": "string",
-					"default": "tw,nl,de",
+					"default": "tw,nl,de"
 		  	},
 		  	"values": {
 					"type": "string",
-					"default": "10,20,10",
+					"default": "10,20,10"
 		  	},
 		    "title": {
 		      "type": "string",
