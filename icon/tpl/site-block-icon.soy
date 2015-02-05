@@ -20,18 +20,7 @@
     <div class="mega-title">{$title?:''}</div>
     <div class="mega-content">{$content?:''|noAutoescape}</div>
   </div>
-  <a class="fancybox icon" id="{$id?:''}" rel="group" href="/jaarplan-nieuw/svg-generator.php?img={$icon}&amp;txt={$txt|escapeUri}&amp;num={$num}" title="{$popup_title?:''}" data-bkgrnd="
-    {if $category == 'start-grow'}
-      green
-    {elseif $category == 'innovate'}
-      pink
-    {elseif $category == 'settle'}
-      red
-    {elseif $category == 'general'}
-      blue
-    {elseif $category == 'milestones'}
-      purple
-    {/if}">
+  <a class="fancybox icon" id="{$id?:''}" rel="group" href="/jaarplan-nieuw/svg-generator.php?img={$icon}&amp;txt={$txt|escapeUri}&amp;num={$num}" title="{$popup_title?:''}" data-bkgrnd="">
     <div class="mega-hover">
       <div class="mega-hoverview"></div>
     </div>
