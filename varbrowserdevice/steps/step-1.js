@@ -26,7 +26,7 @@ var config = {
 							"default" : "dog"
 						}
 					}
-				},
+				}
 			}
 		}
 	}

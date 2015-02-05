@@ -8,11 +8,11 @@ var config = {
 			  "properties": {
 			    "title": {
 			      "type": "string",
-			      "default": "nieuwe title",
+			      "default": "nieuwe title"
 			    },
 			    "url": {
 				      "type": "string",
-				      "default": "//www.youtube.com/embed/CwqSbBxUMpY",
+				      "default": "//www.youtube.com/embed/CwqSbBxUMpY"
 				},
 			    "content" : {
 			    	  "type": "string",

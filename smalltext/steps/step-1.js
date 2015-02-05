@@ -9,11 +9,11 @@ var config = {
 			  "properties": {
 			    "title": {
 			      "type": "string",
-			      "default": "nieuwe title",
+			      "default": "nieuwe title"
 			    },
 			    "subtitle": {
 				      "type": "string",
-				      "default": "nieuwe sub title",
+				      "default": "nieuwe sub title"
 				},
 			    "text" : {
 			    	  "type": "string",
