@@ -27,12 +27,14 @@ var config = {
             "category2": {
                 "type": "string",
                 "enum" : [
+                    "",
                     "start-grow",
                     "innovate",
                     "settle",
                     "general",
                     "milestones"
                 ],
+                "default": "",
                 "propertyOrder": 4
             },
             "icon": {
