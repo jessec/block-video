@@ -12,28 +12,28 @@ var config = {
                 "type": "string",
                 "propertyOrder": 2
             },
-            "categories": {
-                "type": "array",
-                "title": "Categories",
-                "uniqueItems": true,
-                "items": {
-                    "type": "object",
-                    "title": "Category",
-                    "properties": {
-                        "type": {
-                            "type": "string",
-                            "enum" : [
-                                "start-grow",
-                                "innovate",
-                                "settle",
-                                "general",
-                                "milestones"
-                            ],
-                            "default": "start-grow"
-                        }
-                    }
-                },
+            "category1": {
+                "type": "string",
+                "enum" : [
+                    "start-grow",
+                    "innovate",
+                    "settle",
+                    "general",
+                    "milestones"
+                ],
+                "default": "start-grow",
                 "propertyOrder": 3
+            },
+            "category2": {
+                "type": "string",
+                "enum" : [
+                    "start-grow",
+                    "innovate",
+                    "settle",
+                    "general",
+                    "milestones"
+                ],
+                "propertyOrder": 4
             },
             "icon": {
                 "type": "string",
@@ -64,24 +64,24 @@ var config = {
                     "website"
                 ],
                 "default": "rocket",
-                "propertyOrder": 4
+                "propertyOrder": 5
             },
             "id": {
                 "type": "string",
-                "propertyOrder": 5
+                "propertyOrder": 6
             },
 			"num": {
 			    "type": "number",
-			    "propertyOrder": 6
+			    "propertyOrder": 7
 			},
             "txt": {
                 "type": "string",
-                "propertyOrder": 7
+                "propertyOrder": 8
             },
             "content": {
                 "type": "string",
                 "format": "textarea",
-                "propertyOrder": 8
+                "propertyOrder": 9
             }
         }
     }
