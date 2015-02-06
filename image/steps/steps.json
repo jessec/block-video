@@ -1,6 +1,6 @@
 [
 	{
-			"label":"Step 1",
-			"file":"site/blocks/block-video/image/steps/step-1.js"
+		"label": "Stap 1",
+		"file": "site/blocks/block-video/image/steps/step-1.js"
 	}
 ]

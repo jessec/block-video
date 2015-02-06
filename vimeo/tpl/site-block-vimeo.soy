@@ -2,7 +2,8 @@
 /**
  * Kennispark video template
  * @param id
- * @param category
+ * @param category1
+ * @param category2
  * @param img
  * @param video
  * @param title
@@ -10,7 +11,7 @@
  * @param content
  */
 {template .vimeo}
-<div class="mega-entry {$category} cat-all core9-block" data-type="vimeo" data-src="{$img?:''}" data-width="320" data-height="240">
+<div class="mega-entry {$category1}{if $category2 != ''} {$category2}{/if} cat-all core9-block" data-type="vimeo" data-src="{$img?:''}" data-width="320" data-height="240">
   <div class="mega-covercaption mega-square-top mega-landscape-bottom mega-portrait-bottom">
     <div class="mega-title">{$title?:''}</div>
     <div class="mega-content">{$content?:''|noAutoescape}</div>

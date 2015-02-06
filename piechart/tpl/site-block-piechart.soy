@@ -1,16 +1,17 @@
 {namespace site.block}
 /**
-* Kennispark piechart template
-* @param id
-* @param category
-* @param title
-* @param popup_title
-* @param content
-* @param labels
-* @param values
-*/
+ * Kennispark piechart template
+ * @param id
+ * @param category1
+ * @param category2
+ * @param title
+ * @param popup_title
+ * @param content
+ * @param labels
+ * @param values
+ */
 {template .piechart}
-<div class="mega-entry {$category} cat-all core9-block" 
+<div class="mega-entry {$category1}{if $category2 != ''} {$category2}{/if} cat-all core9-block" 
      data-type="piechart" 
      data-chart="pie"
      data-labels="{$labels}"
