@@ -102,6 +102,7 @@ var config = {
                         "Innovatievouchers",
                         "Kennisvouchers",
                         "Gloeilamp",
+                        "Lampjes",
                         "Mijlpaal",
                         "Geld",
                         "Patenten",
